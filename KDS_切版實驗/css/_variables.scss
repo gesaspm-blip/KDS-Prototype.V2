@@ -1,0 +1,147 @@
+/* =============================================
+   variables.css — CSS 自定義變數
+   KDS 智慧廚房控菜系統
+   來源：Figma 設計稿 Frame 907 色票定義
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+$font-family-sans-serif: 'Roboto', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+:root {
+  /* ─── 字型 ─── */
+  --font-family-base: #{$font-family-sans-serif};
+
+  /* 字級（設計稿尺寸 ÷ 2 = CSS 邏輯像素） */
+  --font-size-sm:     18px;  /* 36px ÷ 2 = 18px  big-small */
+  --font-size-base:   20px;  /* 40px ÷ 2 = 20px  big-p / big-h4 */
+  --font-size-h6:     22px;  /* 44px ÷ 2 = 22px  big-h6 */
+  --font-size-h5:     26px;  /* 52px ÷ 2 = 26px  big-h5 */
+  --font-size-h4:     28px;  /* 56px ÷ 2 = 28px  order number / service type */
+  --font-size-h3:     32px;  /* 64px ÷ 2 = 32px  big-h3 qty badge */
+  --font-size-h2:     36px;
+  --font-size-h1:     40px;
+
+  /* 字重 */
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+  --font-weight-bold:    700;
+
+  /* 行高 */
+  --line-height-base:    1.5;
+  --line-height-heading: 1.3;
+
+  /* ─── 主色 ─── */
+  --color-primary-base:   #E15231;
+  --color-primary:        var(--color-primary-base);
+  --color-primary-hover:  #FBEAD6;
+  --color-primary-active: #FFBC6C;
+  --color-primary-light:  #F9C5B5;
+  --color-primary-dark:   #A83520;
+
+  /* ─── 輔助色 ─── */
+  --color-selected-bg:    var(--color-primary-active);
+  --color-accent-light:   #B0E6EA;
+  --color-accent-base:    #3DAFB7;
+  --color-accent-dark:    #287A80;
+  --color-secondary-light: #A8D1EE;
+  --color-secondary-base:  #2A7BB7;
+  --color-secondary-dark:  #1A5483;
+
+  /* ─── 背景 ─── */
+  --color-bg-page:        #FFFFFF;
+  --color-bg-surface:     var(--color-bg-page);
+  --color-bg-header:      var(--color-warning-light); /* warning-light：Top-menu 背景 */
+  --color-bg-sub-header:  #E8EDF3; /* neutral-scale-100：Top-sub-menu 背景 */
+  --color-bg-overlay:     rgba(0, 0, 0, 0.5);
+  --color-bg-light-gray:  #EBEBEB; /* LightGrayBg */
+  --color-bg-3rd:         #BAD5F6; /* 3rdBg */
+  --color-bg-3rd-light:   #DAEAFC; /* 3rd_LightBg */
+  --color-bg-warning-light2: #FEF3C7; /* warning-light2：待排入頁籤 */
+
+  /* ─── 文字 ─── */
+  --color-text-primary:   #000000;
+  --color-text-dark:      #3F3F3F; /* DarkGray：主要內文 */
+  --color-text-secondary: #666666; /* Gray_66：次要說明 */
+  --color-text-disabled:  #CCCCCC; /* Gray_CC */
+  --color-text-muted:     #999999; /* Gray_99 */
+  --color-text-inverse:   #FFFFFF;
+
+  /* ─── 邊框 ─── */
+  --color-border:         var(--color-bg-light-gray);
+  --color-border-dark:    #000000;
+  --color-border-muted:   #999999; /* Gray_99：非 active tab 底線 */
+  --color-border-focus:   #D9D9D9;
+  --color-border-sub-header: #B0BCCE; /* neutral-scale-300 */
+
+  /* ─── 語意色 ─── */
+  --color-info-light:     #BAE6FD;
+  --color-info-base:      #0284C7;
+  --color-info-dark:      #075985;
+  --color-warning-light:  #FDECC8;
+  --color-warning-light2: #FEF3C7;
+  --color-warning-base:   #D97706;
+  --color-warning-dark:   #975204;
+  --color-warning-red:    #BF1400;  /* WarningColor：暫停排入主色 */
+  --color-danger-light:   #FECACA;
+  --color-danger-base:    #DC2626;
+  --color-danger-dark:    #991B1B;
+  --color-danger-pause-bg: #FFCCC0; /* PauseOrderText 背景 */
+  --color-success-light:  #C3EDD5;
+  --color-success-base:   #2E9E5B;
+  --color-success-dark:   #1C6B3C;
+  --color-neutral-50:     #F4F6F9;
+  --color-neutral-100:    #E8EDF3;
+  --color-neutral-200:    #D0D8E4;
+  --color-neutral-300:    #B0BCCE;
+  --color-neutral-400:    #8797AE;
+  --color-neutral-500:    #637A94;
+  --color-neutral-600:    #4A5D73;
+  --color-neutral-700:    #354455;
+  --color-neutral-800:    #1F2C3B;
+  --color-neutral-900:    #111C27;
+
+  /* ─── 圓角 ─── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* ─── 陰影 ─── */
+  --shadow-sm:  0 1px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md:  0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg:  0 8px 32px rgba(0, 0, 0, 0.16);
+
+  /* ─── 間距 ─── */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-7:   28px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-11:  44px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+
+  /* ─── 佈局 ─── */
+  --layout-max-width:       1080px;
+  --layout-min-width:       1024px;
+
+  /* ─── 元件尺寸（設計稿 ÷ 2）─── */
+  --top-menu-height:        56px;   /* 含內距的 Top-menu 列高 (縮小 20%) */
+  --pause-bar-height:       auto;   /* PauseOrderText，動態顯示 */
+  --sub-menu-height:        48px;   /* Top-sub-menu (縮小 20%) */
+  --footer-legend-height:   36px;   /* 底部說明列 */
+  --slip-left-bar-width:    6px;    /* 訂單卡左側色條 12px ÷ 6 */
+  --slip-border-radius:     var(--radius-md); /* 訂單卡圓角 */
+  --qty-badge-size:         40px;   /* 數量徽章 80px ÷ 2 */
+  --icon-btn-size:          40px;   /* IconButton 80px ÷ 2 */
+  --station-tab-height:     35px;   /* StationTabBar (縮小 20%) */
+  --sub-tab-height:         36px;   /* 製餐區 tab (縮小 20%) */
+  --order-view-toggle-height: 29px; /* OrderViewToggle (縮小 20%) */
+}
