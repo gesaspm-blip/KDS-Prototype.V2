@@ -1,0 +1,18 @@
+// =============================================
+// main.scss
+// 入口樣式檔：依照專案結構分層引入
+// =============================================
+
+// ─── 基礎層 (Base / Tokens) ───
+@use 'variables';
+
+// ─── 元件組件 (Components) ───
+@use 'components/icon-button';
+@use 'components/hourglass';
+@use 'components/order-slip';
+@use 'components/top-menu';
+@use 'components/sub-menu';
+@use 'components/paginator';
+
+// ─── 頁面佈局與覆蓋 (Pages & Overrides) ───
+@use 'pages/kds-main';
